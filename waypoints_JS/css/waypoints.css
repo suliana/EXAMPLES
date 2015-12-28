@@ -1,0 +1,79 @@
+body{
+	margin: 0;
+}
+
+section {
+	margin: 100vh 0;
+	padding: 2em 0;
+	background-color: #e2e2e2;
+}
+.dipper{
+	display: block;
+	/*width: 500px;*/
+	margin: 0 auto;
+	opacity: 0;
+	-webkit-transition: all 600ms ease-in; /* Safari */
+	transition: all 600ms ease-in;
+}
+.js-dipper-animate{
+	opacity: 1;
+	-webkit-animation: dipper-jiggle 450ms linear; /* Safari 4+ */
+  	-moz-animation:    dipper-jiggle 450ms linear; /* Fx 5+ */
+  	-o-animation:      dipper-jiggle 450ms linear; /* Opera 12+ */
+  	animation:         dipper-jiggle 450ms linear; /* IE 10+, Fx 29+ */*/
+
+	/*this will only work when it is triggered by js*/
+}
+
+/* Chrome, Safari, Opera */ /* Standard syntax */
+@-webkit-keyframes dipper-jiggle{
+	0%	{	-webkit-trasform: rotate(0deg);}
+	33%	{	-webkit-trasform: rotate(15deg);}
+	66%	{	-webkit-trasform: rotate(-15deg);}
+	100%{	-webkit-trasform: rotate(0deg);}
+}
+
+/* WebKit - Chrome and Safari */
+/*@-webkit-keyframes dipper-jiggle {
+   from { -webkit-transform: rotate(0deg); }
+   to { -webkit-transform: rotate(115deg); }
+}*/
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    /* Chrome, Safari, Opera */
+    -webkit-animation-name: example;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    /* Standard syntax */
+    animation-name: example;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
